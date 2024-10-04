@@ -1,1 +1,1 @@
-1. BetterStack Logging prefix = BSL-
+1. BetterStack Logging prefix = BSL-1000
