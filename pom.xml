@@ -14,6 +14,10 @@
     <groupId>com.spring.boot.dev.notes</groupId>
     <artifactId>spring-boot-dev-notes</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>better-stack-logging</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
