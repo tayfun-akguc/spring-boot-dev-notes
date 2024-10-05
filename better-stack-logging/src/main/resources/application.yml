@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: better-stack-application-logging
+  # Set the default profile as local
+  profiles:
+    default: local
