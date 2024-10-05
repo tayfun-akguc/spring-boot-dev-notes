@@ -1,0 +1,11 @@
+### Should return 400
+http://localhost:8080/api/v1/users/0
+
+### Should return 404
+http://localhost:8080/api/v1/users/2
+
+### Should return 200
+http://localhost:8080/api/v1/users/1
+
+
+
