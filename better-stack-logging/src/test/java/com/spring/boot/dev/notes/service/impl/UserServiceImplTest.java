@@ -31,4 +31,17 @@ public class UserServiceImplTest {
         assertEquals(HttpStatus.BAD_REQUEST, exception.getStatusCode());
         verify(mockService, never()).logUserId(anyLong());
     }
+
+    @Test
+    void getUserById_whenUserIdIsEven_thenThrowNotFound() {
+        var userId = 2L;
+
+        ResponseStatusException exception = assertThrows(ResponseStatusException.class,
+                () -> userService.getUserById(userId));
+
+        assertEquals(HttpStatus.NOT_FOUND, exception.getStatusCode());
+        verify(mockService, never()).logUserId(anyLong());
+    }
+
+
 }
