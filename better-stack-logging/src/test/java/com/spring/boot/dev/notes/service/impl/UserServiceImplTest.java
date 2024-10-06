@@ -43,5 +43,18 @@ public class UserServiceImplTest {
         verify(mockService, never()).logUserId(anyLong());
     }
 
+    @Test
+    void getUserById_whenUserIdIsOdd_thenReturnUser() {
+        var userId = 1L;
 
+        var result = userService.getUserById(userId);
+
+        assertNotNull(result);
+        assertEquals(userId, result.getId());
+        assertNotNull(result.getEmail());
+        assertNotNull(result.getFirstName());
+        assertNotNull(result.getLastName());
+
+        verify(mockService, times(1)).logUserId(userId);
+    }
 }
